@@ -1,0 +1,350 @@
+
+:root {
+    --bg-principal: #121214;    
+    --bg-secundario: #1a1a1e;     
+    --cor-texto: #e1e1e6;          
+    --cor-texto-mutado: #a8a8b3; 
+    --neon-principal: #00f5d4;  
+    --neon-hover: #00bbf9;       
+    --fonte-limpa: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--cor-texto);
+    font-family: var(--fonte-limpa);
+    line-height: 1.6;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 245, 212, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 245, 212, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 245, 212, 0);
+    }
+}
+
+header {
+    background-color: rgba(26, 26, 30, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #29292e;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--neon-principal);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--cor-texto-mutado);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--neon-principal);
+}
+
+
+.hero-section {
+    padding: 4rem 1.5rem;
+    text-align: center;
+    background: radial-gradient(circle at top right, rgba(0, 245, 212, 0.05), transparent 60%);
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.hero-content p {
+    color: var(--cor-texto-mutado);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--neon-principal);
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--neon-hover);
+    transform: translateY(-2px);
+}
+
+.services-section {
+    background-color: var(--bg-secundario);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--cor-texto-mutado);
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.service-card {
+    background-color: var(--bg-principal);
+    border: 1px solid #29292e;
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.service-card:hover {
+    transform: scale(1.03);
+    border-color: var(--neon-principal);
+}
+
+.service-card.featured {
+    border: 2px solid var(--neon-principal);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--neon-principal);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--neon-principal);
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.details {
+    color: var(--cor-texto-mutado);
+    font-size: 0.95rem;
+}
+
+.booking-section {
+    padding: 4rem 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    background-color: var(--bg-secundario);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #29292e;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+input, select {
+    background-color: var(--bg-principal);
+    border: 1px solid #29292e;
+    padding: 0.8rem;
+    border-radius: 6px;
+    color: #fff;
+    font-family: var(--fonte-limpa);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--neon-principal);
+}
+
+.btn-submit {
+    background-color: var(--neon-principal);
+    color: #000;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2.5s infinite;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: var(--neon-hover);
+}
+
+#custom-alert {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.alert-success {
+    background-color: rgba(0, 245, 212, 0.1);
+    border: 1px solid var(--neon-principal);
+    color: var(--neon-principal);
+}
+
+.alert-error {
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+.alert-hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--cor-texto-mutado);
+    font-size: 0.85rem;
+    border-top: 1px solid #29292e;
+}
+
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+
+    .hero-section {
+        padding: 7rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .services-section {
+        padding: 6rem 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    form {
+        padding: 3rem 2.5rem;
+    }
+}

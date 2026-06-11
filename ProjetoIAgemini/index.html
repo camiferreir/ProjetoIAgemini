@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop High Standard - Banho e Tosa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">LUXURY<span>PET</span></div>
+            <nav>
+                <a href="#hero">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#agendamento">Agendar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Estilo e Cuidado de Alto Padrão para o seu Pet</h1>
+                <p>Experiência premium em estética canina e felina. Conforto, profissionalismo e carinho que eles merecem.</p>
+                <a href="#agendamento" class="btn-cta">Agendar uma Experiência</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="services-section">
+            <h2>Nossos Serviços Exclusivos</h2>
+            <p class="section-subtitle">Focados no bem-estar e na experiência do seu melhor amigo</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-header">
+                        <h3>Banho Premium</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="price">R$ 90,00</p>
+                        <p class="duration">⏱ Tempo estimado: 1h00</p>
+                        <p class="details">Produtos hipoalergênicos importados, secagem e escovação cuidadosa.</p>
+                    </div>
+                </div>
+
+                <div class="service-card featured">
+                    <span class="badge">Mais Vendido</span>
+                    <div class="card-header">
+                        <h3>Tosa Higiênica + Banho</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="price">R$ 140,00</p>
+                        <p class="duration">⏱ Tempo estimado: 1h30</p>
+                        <p class="details">Limpeza completa das patinhas, região íntima e banho relaxante completo.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-header">
+                        <h3>Tosa na Tesoura</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="price">R$ 190,00</p>
+                        <p class="duration">⏱ Tempo estimado: 2h00</p>
+                        <p class="details">Corte artístico e personalizado feito inteiramente à mão por especialistas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="booking-section">
+            <h2>Agende um Horário</h2>
+            <p class="section-subtitle">Preencha os dados e garanta a vaga do seu pet</p>
+
+            <form id="form-agendamento" novalidate>
+                <div class="form-group">
+                    <label for="nome-tutor">Nome do Tutor</label>
+                    <input type="text" id="nome-tutor" required placeholder="Ex: João Silva">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone-tutor">Telefone de Contato</label>
+                    <input type="text" id="telefone-tutor" required placeholder="(00) 00000-0000" maxlength="15">
+                </div>
+
+                <div class="form-group">
+                    <label for="nome-pet">Nome do Pet</label>
+                    <input type="text" id="nome-pet" required placeholder="Ex: Luke">
+                </div>
+
+                <div class="form-group">
+                    <label for="raca-pet">Raça do Pet</label>
+                    <input type="text" id="raca-pet" required placeholder="Ex: Golden Retriever">
+                </div>
+
+                <div class="form-group">
+                    <label for="data-agendamento">Data do Agendamento</label>
+                    <input type="date" id="data-agendamento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="selecao-servico">Escolha o Serviço</label>
+                    <select id="selecao-servico" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="Banho Premium">Banho Premium</option>
+                        <option value="Tosa Higiênica + Banho">Tosa Higiênica + Banho</option>
+                        <option value="Tosa na Tesoura">Tosa na Tesoura</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Confirmar Solicitação</button>
+            </form>
+            
+            <div id="custom-alert" class="alert-hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LuxuryPet. Todos os direitos reservados. Focado na experiência do seu pet.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
